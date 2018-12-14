@@ -1,0 +1,62 @@
+<html>
+    <head>
+        <title>Set up steps</title>
+        <meta charset="UTF-8">
+        <meta name="author" content="Maria Herrero">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h1>My tech blog</h1>
+        <header>
+            <nav>
+                <ul>
+                    <li>AWS</li>
+                    <li>Azure</li>
+                    <li>.NET Framework</li>
+                    <li>.NET Core</li>
+                    <li>Services</li>
+                    <li>AI</li>
+                    <li>Data Visualization</li>
+                </ul>
+            </nav>
+        </header>
+        <section>
+            <p>
+               <h2>Setting up an AWS Cloud9 environment</h2>
+               Setting up an AWS environment<br>
+                Create manually an environment in AWS Cloud9<br>
+                Open terminal and type:<br>
+                    wget -q https://git.io/v77xs -0 /tmp/setup-workspace.sh && source /tmp/setup-workspace.sh<br>
+                Create virtual enviorment installs automatically all that is needed to set up django and activate the virtual environment.<br>
+                    mkvirtualenv foo<br>
+                Install django<br>
+                    pip3 install django<br>
+                If necessary downgrade to a earlier version<br>
+                    pip install django==1.11<br>
+                Create the first requirements<br>
+                    pip freeze > requirements.txt<br>
+                Create a django project in the root directory and make the manage.py and executable file changing the permissions and execute migrate to initialize the database<br>
+                    django-admin startproject blog .<br>
+                    chmod +x manage.py<br>
+                    ./manage.py migrate or python3 manage.py migrate
+                To access sqlite command line you run sqlite3 db.sqlite3<br>
+                select * from django_migrations<br>
+                Run the application on the server<br>
+                python3 ./manage.py runserver $IP:$PORT<br>
+                It will get a DisallowedHost error add the django server hostname to AllOWED_HOST variable in settings.py<br>
+                Initialize git repository<br>
+                git init<br>
+                Create a gitignore file<br>
+                echo -e "*.sqlite3\n*.pyc\n.~c9\n__pycache__/" > .gitignore or
+                echo -e "*.sqlite3\n*.pyc\n.c9\n__pycache__/" > .gitignore
+                
+            </p>
+        </section>
+        <section>
+                <h2>Azure authentication mechanisms</h2>
+        </section>
+        <footer>
+                Maria de Andres Herrero 2018
+        </footer>
+    </body>
+</html>
