@@ -47,8 +47,16 @@
                 Initialize git repository<br>
                 git init<br>
                 Create a gitignore file<br>
-                echo -e "*.sqlite3\n*.pyc\n.~c9\n__pycache__/" > .gitignore or
-                echo -e "*.sqlite3\n*.pyc\n.c9\n__pycache__/" > .gitignore
+                echo -e "*.sqlite3\n*.pyc\n.~c9\n__pycache__/" > .gitignore or<br>
+                echo -e "*.sqlite3\n*.pyc\n.c9\n__pycache__/" > .gitignore<br>
+                Create a new repository in GitHub web UI<br>
+                Come back to terminal and push the changes from local to remote using SSH protocol<br>
+                git remote add origin git@github.com:MariaDAH/mydjango-techblog.git<br>
+                git push -u origin master<br>
+                Make sure you previously generated a SSH key in your GitHub account<br>
+                Synchronize with Travis for continuous integration
+              
+                
                 
             </p>
         </section>
